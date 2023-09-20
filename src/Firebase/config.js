@@ -4,13 +4,12 @@ import 'firebase/compat/auth'
 import 'firebase/compat/storage'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCtq605bwQAHX22gasLKlDL_iXBRTUDwbc",
-    authDomain: "olx-clone-91194.firebaseapp.com",
-    projectId: "olx-clone-91194",
-    storageBucket: "olx-clone-91194.appspot.com",
-    messagingSenderId: "474583573975",
-    appId: "1:474583573975:web:d934db2a0940fdc07e1792",
-    measurementId: "G-3EK3NSRJT1"
+  apiKey: "AIzaSyD1Jl6bUcy4cpiJ_zSQZ-kHNLcLdxsSDAQ",
+  authDomain: "olx-clone2-43c0c.firebaseapp.com",
+  projectId: "olx-clone2-43c0c",
+  storageBucket: "olx-clone2-43c0c.appspot.com",
+  messagingSenderId: "920781864052",
+  appId: "1:920781864052:web:81da5b5c26a2f417e96521"
   };
   
   // Initialize Firebase
