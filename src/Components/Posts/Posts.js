@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Heart from "../../assets/Heart";
 import {  FirebaseContext } from "../../store/firebaseContext";
+import {  PostContext } from "../../store/PostContext";
 import "./Post.css";
 
 function Posts() {
   const { firebase } = useContext(FirebaseContext);
   const [products, setProducts] = useState([]);
+  const {setPostDetails} = useContext(PostContext)
   useEffect(() => {
     firebase
       .firestore()
@@ -21,7 +24,7 @@ function Posts() {
         });
         setProducts(allPost);
       });
-  }, []);
+  }, );
 
   return (
     <div className="postParentDiv">
@@ -35,7 +38,11 @@ function Posts() {
           <div className="cards">
           {products.map((product) => {
           return (
-            <div className="card">
+            <Link to='/view' className="link">
+            <div className="card"
+            onClick={()=>{
+              setPostDetails(product)
+            }}>
               <div className="favorite">
                 <Heart></Heart>
               </div>
@@ -51,6 +58,7 @@ function Posts() {
                 <span>{product.createdAt}</span>
               </div>
             </div>
+            </Link>
                 )
               })}
           </div>
